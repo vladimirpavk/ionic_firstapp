@@ -8,9 +8,7 @@ import { UsersPage } from '../users/users';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
-  }
+  constructor(public navCtrl: NavController) {}
 
   private onUserButtonClicked(){
     this.navCtrl.push(UsersPage);

@@ -1,11 +1,23 @@
-import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { Component, OnInit } from '@angular/core';
+import { NavParams, NavController } from 'ionic-angular';
 
-@IonicPage()
 @Component({
     selector: 'page-user',
-    template: 'user.html'
+    templateUrl: 'user.html',
 })
-export class UserPage{
-    public name:string;
+export class UserPage implements OnInit{
+    public name:string = 'Pavle';
+
+    constructor(
+        private navParams:NavParams,
+        private navCtrl:NavController
+    ){}
+
+    ngOnInit(){
+        this.name=this.navParams.data;
+    }    
+
+    private onConfirmButtonClicked(){
+        this.navCtrl.popToRoot();
+    }
 }
