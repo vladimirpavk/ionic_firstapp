@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { UsersPage } from '../users/users';
+import { ShopPage } from '../shop/shop';
 
 @Component({
   selector: 'page-home',
@@ -10,8 +10,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {}
 
-  private onUserButtonClicked(){
-    this.navCtrl.push(UsersPage);
+  private onShopButtonClicked(){
+    this.navCtrl.push(ShopPage);
   }
 
 }
