@@ -7,11 +7,5 @@ import { ShopPage } from '../shop/shop';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController) {}
-
-  private onShopButtonClicked(){
-    this.navCtrl.push(ShopPage);
-  }
-
+  private shopPage = ShopPage;
 }
